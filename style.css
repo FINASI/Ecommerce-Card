@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #131313;
+}
+.nada{
+    opacity: 0;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.container .card{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.container .card:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #F00B29;
+    clip-path: circle(10px at 50% 40%);
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+}
+.container .card:hover:before{
+    clip-path: circle(250px at 50% -30%);
+    opacity: 100%;
+    transition: 0.5s;
+}
+.container .card:after{
+    content: 'Nike';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 900;
+    font-style: italic;
+    color: rgba(255, 255, 255,0.04);
+}
+.container .card .imagebx{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 200px;
+    transition: 0.5s;
+}
+.container .card:hover .imagebx{
+    top: 35%;
+    transform: translateY(0%) translateX(-12%) rotate(25deg);
+}
+.container .card .imagebx img{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+}
+.container .card .contentbx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+.container .card:hover .contentbx{
+    height: 210px;
+}
+.container .card .contentbx h2{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 35px 15px;
+}
+.container .card .contentbx .tamanho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.container .card .contentbx .cores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.container .card:hover .contentbx .tamanho{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.35s;
+}
+.container .card:hover .contentbx .cores{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.35s;
+}
+.container .card .contentbx .tamanho h3{
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+.container .card .contentbx .cores h3{
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+.container .card .contentbx .tamanho span{
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    background: #fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.container .card .contentbx .tamanho span:hover{
+    background: #F00B29;
+}
+.container .card .contentbx .cores span:hover{
+    background: #F00B29;
+}
+.container .card .contentbx .cores span{
+    width: 20px;
+    height: 20px;
+    background: #F00B29 ;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.container .card .contentbx .cores span:nth-child(2){
+    background: blue;
+}
+img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+.container .extra .content{
+    position: relative;
+    background: none;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.container .extra .content button{
+    margin: 80px 20px 0;
+    color: #fff;
+    padding: 20px;
+    border: none;
+    background: none;
+    font-weight: 900;
+    font-size: 48px;
+    clip-path: circle(30px );
+    transition: 0.3s;   
+}
+.container .extra .content button:hover{
+    background: #fff;
+    color: #F00B29;
+    cursor: pointer;
+}
